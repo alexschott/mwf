@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/onSiteLinearLayout">
+            <TextView
+                android:text="On Site"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:id="@+id/textView1" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearlayout4">
+                <DatePicker
+                    android:id="@+id/onSiteDatePicker"
+                    android:layout_width="160dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout1"
+                    android:calendarViewShown="false"
+                    local:MvxBind="DateTime OnSiteDateTime" />
+                <TimePicker
+                    android:id="@+id/onSiteTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout1"
+                    android:calendarViewShown="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/completeLinearLayout">
+            <TextView
+                android:text="Complete"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:id="@+id/textView2" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2">
+                <DatePicker
+                    android:id="@+id/completeDatePicker"
+                    android:layout_width="160dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout1"
+                    android:calendarViewShown="false"
+                    local:MvxBind="DateTime CompleteDateTime" />
+                <TimePicker
+                    android:id="@+id/completeTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout1"
+                    android:calendarViewShown="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/ButtonAdvanceConfirmTimes"
+        style="@style/Proteo.Button.Bottom"
+        local:MvxBind="Text ConfirmTimesButtonLabel; Click ButtonAdvanceConfirmTimes; Enabled IsProgressing, Converter=BoolInverse;"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  <mwf.BindableProgress
+      local:MvxBind="ShowProgress IsProgressing; Message ProgressMessage;" />
+</RelativeLayout>

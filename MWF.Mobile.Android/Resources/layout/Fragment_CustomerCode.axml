@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:paddingTop="32dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            style="@style/Proteo.ImageView.MWFLogo" />
+        <TextView
+            style="@style/Proteo.TextView.MainHeading"
+            local:MvxBind="Text CustomerCodeLabel" />
+        <EditText
+            android:id="@+id/CustomerCodeBox"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            style="@style/Proteo.EditText"
+            local:MvxBind="Text CustomerCode" />
+        <Button
+            style="@style/Proteo.Button"
+            local:MvxBind="Text EnterButtonLabel; Click EnterCodeCommand" />
+    </LinearLayout>
+    <TextView
+        style="@style/Proteo.TextView.VersionFooter"
+        local:MvxBind="Text VersionText" />
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsBusy; Message ProgressMessage; Title ProgressTitle;" />
+</RelativeLayout>

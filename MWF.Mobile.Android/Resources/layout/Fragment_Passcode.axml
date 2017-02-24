@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:paddingTop="32dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            style="@style/Proteo.ImageView.MWFLogo" />
+        <TextView
+            style="@style/Proteo.TextView.MainHeading"
+            local:MvxBind="Text PasscodeLabel" />
+        <EditText
+            style="@style/Proteo.EditText.NumberPasscode"
+            android:id="@+id/editTextPasscode"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            local:MvxBind="Text Passcode" />
+        <Button
+            style="@style/Proteo.Button"
+            android:id="@+id/buttonPasscode"
+            local:MvxBind="Text PasscodeButtonLabel; Click LoginCommand; LongClick SendDiagnosticsCommand" />
+        <Button
+            style="@style/Proteo.Button"
+            android:id="@+id/buttonCheckIn"
+            android:layout_margin="10dp"
+            local:MvxBind="Text CheckInButtonLabel; Click CheckInCommand; LongClick SendDiagnosticsCommand; Visible CheckInButtonVisible" />
+    </LinearLayout>
+    <TextView
+        style="@style/Proteo.TextView.VersionFooter"
+        local:MvxBind="Text VersionText" />
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsBusy; Message ProgressMessage; Title ProgressTitle;" />
+</RelativeLayout>

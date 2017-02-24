@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:padding="0dp">
+    <Mvx.MvxImageView
+        android:id="@+id/faultImageView"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:background="@drawable/drop_shadow"
+        local:MvxBind="Bitmap Bytes, Converter=InMemoryImage; Click DisplayCommand" />
+    <ImageButton
+        android:layout_alignRight="@id/faultImageView"
+        android:layout_alignTop="@id/faultImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:padding="4dip"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@null"
+        android:src="@drawable/small_cross"
+        local:MvxBind="Click DeleteCommand;" />
+</RelativeLayout>

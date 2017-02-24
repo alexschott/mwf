@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="30.0dp"
+        local:MvxBind="Text OdometerLabel" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24.0dp"
+        local:MvxBind="Text Registration" />
+    <EditText
+        style="@style/Proteo.EditText.Number"
+        android:id="@+id/odometerText"
+        android:maxLength="6"
+        local:MvxBind="Text OdometerValue"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
+    <Button
+        style="@style/Proteo.Button"
+        android:id="@+id/submit"
+        local:MvxBind="Text OdometerButtonLabel; Click StoreCommand;" />
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24.0dp"
+        local:MvxBind="Text OrderDeliveryNo" />
+
+  <TableLayout
+    android:layout_width="match_parent"
+    android:stretchColumns="2">
+    <TableRow
+      android:layout_width="fill_parent"
+      android:orientation="horizontal"
+      android:layout_weight="1">
+      <TextView
+           style="@style/Proteo.TextView.Revise"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="Spaces" />
+      <EditText
+        android:id="@+id/reviseQuantityText"
+        android:maxLength="6"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        local:MvxBind="Text OrderQuantity"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
+    </TableRow>
+    <TableRow
+     android:layout_width="fill_parent"
+     android:orientation="horizontal"
+     android:layout_weight="1">
+      <TextView
+            style="@style/Proteo.TextView.Revise"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Pallets" />
+      <EditText
+          android:id="@+id/revisePalletsText"
+          android:maxLength="6"
+          android:layout_weight="1"
+          android:layout_width="fill_parent"
+          local:MvxBind="Text OrderPallets"
+          android:imeOptions="actionDone"
+          android:singleLine="true" />
+    </TableRow>
+    <TableRow
+     android:layout_width="fill_parent"
+     android:orientation="horizontal"
+     android:layout_weight="1">
+      <TextView
+            style="@style/Proteo.TextView.Revise"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Cases" />
+      <EditText
+          android:id="@+id/reviseCasesText"
+          android:maxLength="6"
+          android:layout_weight="1"
+          android:layout_width="fill_parent"
+          local:MvxBind="Text OrderCases"
+          android:imeOptions="actionDone"
+          android:singleLine="true" />
+    </TableRow>
+    <TableRow
+     android:layout_width="fill_parent"
+     android:orientation="horizontal"
+     android:layout_weight="1">
+      <TextView
+            style="@style/Proteo.TextView.Revise"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Weight" />
+      <EditText
+          android:id="@+id/reviseCasesText"
+          android:maxLength="6"
+          android:layout_weight="1"
+          android:layout_width="fill_parent"
+          local:MvxBind="Text OrderWeight"
+          android:imeOptions="actionDone"
+          android:singleLine="true" />
+    </TableRow>
+  </TableLayout>
+    <Button
+        style="@style/Proteo.Button"
+        android:id="@+id/submit"
+        android:background="#ffcf7b"
+        local:MvxBind="Text ReviseQuantityButtonLabel; Click ReviseQuantityCommand" />
+</LinearLayout>

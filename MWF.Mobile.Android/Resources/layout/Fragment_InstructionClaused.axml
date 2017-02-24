@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/clausedText"
+        android:orientation="vertical">
+        <TextView
+            android:paddingTop="50dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="20.0dp"
+            android:paddingBottom="20dp"
+            local:MvxBind="Text PhoneSentenceText" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="20.0dp"
+            local:MvxBind="Text PhotoSentenceText" />
+    </LinearLayout>
+    <Button
+        style="@style/Proteo.Button.Bottom"
+        android:id="@+id/AdvanceButton"
+        local:MvxBind="Click AdvanceInstructionCommand; Text AdvanceButtonText" />
+    <LinearLayout
+        android:layout_above="@id/AdvanceButton"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_weight="0.5"
+            android:width="0dp"
+            style="@style/Proteo.Button.Secondary"
+            android:id="@+id/takePictureButton"
+            android:src="@drawable/ic_action_camera"
+            local:MvxBind="Click OpenCameraScreenCommand;" />
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_weight="0.5"
+            android:width="0dp"
+            style="@style/Proteo.Button.Secondary"
+            android:id="@+id/openPhoneAppButton"
+            android:src="@drawable/ic_action_call"
+            local:MvxBind="Click LaunchPhoneAppCommand;" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/button"
+        style="@style/Proteo.Button.Bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        local:MvxBind="Text ReadButtonText; Click ReadMessageCommand;" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_above="@id/button"
+        android:id="@+id/scrollLayout">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp">
+            <TextView
+                style="@style/Proteo.TextView.MessageContent"
+                local:MvxBind="Text MessageContentText" />
+            <TextView
+                style="@style/Proteo.TextView.SectionHeading"
+                local:MvxBind="Text AddressLabelText; Visible IsWithPoint" />
+            <TextView
+                style="@style/Proteo.TextView.SectionContent"
+                local:MvxBind="Text PointDescription; Visible IsWithPoint" />
+            <TextView
+                style="@style/Proteo.TextView.SectionContent"
+                local:MvxBind="Text Address; Visible IsWithPoint" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

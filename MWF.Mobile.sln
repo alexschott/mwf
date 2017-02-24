@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWF.Mobile.Core", "MWF.Mobile.Core\MWF.Mobile.Core.csproj", "{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWF.Mobile.Android", "MWF.Mobile.Android\MWF.Mobile.Android.csproj", "{6143BCA6-AF7C-4E70-9F66-616E723CE82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWF.Mobile.Tests", "MWF.Mobile.Tests\MWF.Mobile.Tests.csproj", "{2011A55B-DFDE-4873-8D6B-D61A31176688}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F82202CC-BC95-42A4-A1E6-FF8EF99338DC}"
+	ProjectSection(SolutionItems) = preProject
+		DataChanges.txt = DataChanges.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLite.NET", "SQLite.NET", "{BAFCA039-8F55-41E7-8711-41F43BE54393}"
+	ProjectSection(SolutionItems) = preProject
+		SQLite.NET\SQLite.Net.Async.dll = SQLite.NET\SQLite.Net.Async.dll
+		SQLite.NET\SQLite.Net.Async.pdb = SQLite.NET\SQLite.Net.Async.pdb
+		SQLite.NET\SQLite.Net.dll = SQLite.NET\SQLite.Net.dll
+		SQLite.NET\SQLite.Net.pdb = SQLite.NET\SQLite.Net.pdb
+		SQLite.NET\SQLite.Net.Platform.Generic.dll = SQLite.NET\SQLite.Net.Platform.Generic.dll
+		SQLite.NET\SQLite.Net.Platform.Generic.pdb = SQLite.NET\SQLite.Net.Platform.Generic.pdb
+		SQLite.NET\SQLite.Net.Platform.XamarinAndroid.dll = SQLite.NET\SQLite.Net.Platform.XamarinAndroid.dll
+		SQLite.NET\SQLite.Net.Platform.XamarinAndroid.pdb = SQLite.NET\SQLite.Net.Platform.XamarinAndroid.pdb
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug-Firmin|Any CPU = Debug-Firmin|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}.Debug-Firmin|Any CPU.ActiveCfg = Debug Firmin|Any CPU
+		{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}.Debug-Firmin|Any CPU.Build.0 = Debug Firmin|Any CPU
+		{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Debug-Firmin|Any CPU.ActiveCfg = Debug Firmin|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Debug-Firmin|Any CPU.Build.0 = Debug Firmin|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Debug-Firmin|Any CPU.Deploy.0 = Debug Firmin|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6143BCA6-AF7C-4E70-9F66-616E723CE82E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2011A55B-DFDE-4873-8D6B-D61A31176688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2011A55B-DFDE-4873-8D6B-D61A31176688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2011A55B-DFDE-4873-8D6B-D61A31176688}.Debug-Firmin|Any CPU.ActiveCfg = Debug Firmin|Any CPU
+		{2011A55B-DFDE-4873-8D6B-D61A31176688}.Debug-Firmin|Any CPU.Build.0 = Debug Firmin|Any CPU
+		{2011A55B-DFDE-4873-8D6B-D61A31176688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2011A55B-DFDE-4873-8D6B-D61A31176688}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAFCA039-8F55-41E7-8711-41F43BE54393} = {F82202CC-BC95-42A4-A1E6-FF8EF99338DC}
+	EndGlobalSection
+EndGlobal

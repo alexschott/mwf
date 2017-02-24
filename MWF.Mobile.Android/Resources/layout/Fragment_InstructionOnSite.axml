@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/InstructionOnSiteListHeader"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Details"
+            style="@style/Proteo.TextView.ItemText" />
+        <TextView
+            android:text="Qty"
+            style="@style/Proteo.TextView.ItemText" />
+    </LinearLayout>
+    <textView
+        style="@style/Proteo.TextView.ListHeadingSections"
+        android:id="@+id/instructionOnSiteHeader"
+        local:MvxBind="Text HeaderText"
+        android:layout_above="@id/InstructionOnSiteListHeader"
+        android:layout_alignParentTop="true" />
+    <Mvx.MvxListView
+        android:layout_below="@+id/InstructionOnSiteListHeader"
+        android:layout_above="@+id/ButtonAddDeliveries"
+        local:MvxBind="ItemsSource OrderList; ItemClick ShowInstructionOrderCommand"
+        local:MvxItemTemplate="@layout/item_instructiononsite_order" />
+    <Button
+        android:id="@+id/ButtonAddDeliveries"
+        style="@style/Proteo.Button"
+        local:MvxBind="Text AddDeliveriesButtonLabel; Click AddDeliveriesCommand; Visible IsDeliveryAddEnabled"
+        android:layout_above="@+id/ButtonAdvanceInstructionComment" />
+    <Button
+        android:id="@+id/ButtonAdvanceInstructionComment"
+        local:MvxBind="Text InstructionCommentButtonLabel; Click AdvanceInstructionOnSiteCommand"
+        style="@style/Proteo.Button.Bottom" />
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="42dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="4dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:weightSum="1.0"
+    android:background="?android:attr/selectableItemBackground"
+    local:MvxBind="Click SelectBarcodeCommand">
+    <LinearLayout
+        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_weight=".1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        local:MvxBind="Visibility IsDummy, Converter=BoolToVisibility, ConverterParameter=False">
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/empty_square"
+            local:MvxBind="Visibility IsDelivered, Converter=NullableBoolToVisibility, ConverterParameter=null"
+            android:gravity="center_vertical" />
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_action_accept"
+            local:MvxBind="Visibility IsDelivered, Converter=NullableBoolToVisibility, ConverterParameter=True"
+            android:gravity="center_vertical" />
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_action_warning"
+            local:MvxBind="Visibility IsDelivered, Converter=NullableBoolToVisibility, ConverterParameter=False"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_weight=".9"
+        android:paddingLeft="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        local:MvxBind="Visibility IsDummy, Converter=BoolToVisibility, ConverterParameter=False">
+        <TextView
+            android:id="@+id/BarcodeItem"
+            style="@style/Proteo.TextView.ItemText.Small"
+            android:gravity="center_vertical"
+            local:MvxBind="Text BarcodeText"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true" />
+        <ImageView
+            android:id="@+id/skinnyHamburger"
+            android:scaleType="fitXY"
+            android:layout_height="24dp"
+            android:layout_width="24dp"
+            android:src="@drawable/ic_action_overflow"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3.5dp"
+            android:layout_marginLeft="1dp"
+            local:MvxBind="Click SelectBarcodeCommand; Visibility IsDelivered, Converter=NullableBoolToVisibility, ConverterParameter=NotNull" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="25dp"
+            local:MvxBind="Checked IsSelected; Visibility IsDelivered, Converter=NullableBoolToVisibility, ConverterParameter=NotNull"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/BarcodeDamageStatus"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="43dp"
+            style="@style/Proteo.TextView.ItemText.Small"
+            android:gravity="center_vertical"
+            android:textColor="#f00"
+            local:MvxBind="Text DamageIndicatorText"
+            android:layout_toLeftOf="@+id/skinnyHamburger" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        style="@style/Proteo.TextView.ListHeadingNoSections"
+        android:id="@+id/trailerText"
+        local:MvxBind="Text TrailerSelectText" />
+    <Mvx.MvxListView
+        android:layout_below="@id/trailerText"
+        local:MvxBind="ItemsSource Trailers; ItemClick TrailerSelectCommand"
+        local:MvxItemTemplate="@layout/item_trailer" />
+<!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonAdvanceInstructionTrailer"
+        local:MvxBind="Text InstructionTrailerButtonLabel; Click SelectTrailerCommand"
+        style="@style/Proteo.Button" />-->
+</LinearLayout>

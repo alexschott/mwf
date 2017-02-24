@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            style="@style/Proteo.TextView.SubHeading"
+            local:MvxBind="Text Message" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                style="@style/Proteo.TextView.ItemText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                local:MvxBind="Text NameText" />
+            <EditText
+                style="@style/Proteo.EditText"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                local:MvxBind="Text DriverName" />
+        </LinearLayout>
+        <signaturepad.SignaturePadView
+            android:id="@+id/driverSignatureView"
+            style="@style/Proteo.SignaturePad"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+        <Button
+            style="@style/Proteo.Button.Bottom"
+            android:id="@+id/buttonComplete"
+            local:MvxBind="Text CompleteButtonLabel; LongClick SendDiagnosticsCommand" />
+    </LinearLayout>
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsBusy; Message ProgressMessage; Title ProgressTitle;" />
+</RelativeLayout>

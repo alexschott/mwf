@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:gravity="left">
+    <TextView
+        android:layout_weight="0.2"
+        style="@style/Proteo.TextView.ItemText"
+        android:layout_width="0dp"
+        local:MvxBind="Text FaultType"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6">
+        <TextView
+            style="@style/Proteo.TextView.ItemText"
+            android:textSize="15dp"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/faultCheckTitle"
+            local:MvxBind="Text FaultCheckTitle"
+            android:singleLine="false"
+            android:maxLines="4" />
+        <TextView
+            android:textSize="15dp"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/faultCheckComment"
+            local:MvxBind="Text FaultCheckComment"
+            android:textStyle="italic"
+            android:singleLine="true"
+            android:ellipsize="end" />
+    </LinearLayout>
+    <TextView
+        style="@style/Proteo.TextView.ItemText"
+        android:layout_weight="0.2"
+        android:layout_width="0dp"
+        local:MvxBind="Text FaultStatus"
+        android:textSize="15dp" />
+</LinearLayout>

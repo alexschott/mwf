@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp">
+            <textview
+                style="@style/Proteo.TextView.InfoAndInput"
+                android:layout_weight="0.2"
+                android:text="Name:" />
+            <EditText
+                style="@style/Proteo.TextView.InfoAndInput"
+                android:layout_weight="0.8"
+                android:id="@+id/InstructionCustomerName"
+                local:MvxBind="Text CustomerName"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@drawable/border"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <textview
+                style="@style/Proteo.TextView.SubInformation"
+                android:textSize="16dp"
+                android:layout_height="fill_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:gravity="left"
+                local:MvxBind="Text InstructionSignaturePageHeader" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:textSize="15dp"
+                android:id="@+id/ButtonSignatureToggle"
+                style="@style/Proteo.Button.InSection"
+                local:MvxBind="Text SignatureToggleButtonLabel" />
+        </LinearLayout>
+        <signaturepad.SignaturePadView
+            android:id="@+id/signature_instructionView"
+            style="@style/Proteo.SignaturePad" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonAdvanceSignatureInstruction"
+        style="@style/Proteo.Button.Bottom"
+        local:MvxBind="Text InstructionSignatureButtonLabel" />
+</RelativeLayout>

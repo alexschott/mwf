@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/button"
+        style="@style/Proteo.Button.Bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        local:MvxBind="Text ProgressButtonText; Click CompleteInstructionCommand;" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_above="@id/button"
+        android:id="@+id/scrollLayout">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp">
+            <TextView
+                style="@style/Proteo.TextView.MainHeading"
+                local:MvxBind="Text RunID"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/Proteo.TextView.SectionContent"
+                    android:layout_width="wrap_content"
+                    local:MvxBind="Text ArriveDepartDateTime" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/Proteo.TextView.SectionContent"
+                    android:layout_width="50dp"
+                    android:textSize="16dp"
+                    local:MvxBind="Text DepartLabelText" />
+                <TextView
+                    style="@style/Proteo.TextView.SectionContent"
+                    android:layout_width="wrap_content"
+                    android:textSize="16dp"
+                    local:MvxBind="Text DepartDateTime" />
+            </LinearLayout>
+            <TextView
+                style="@style/Proteo.TextView.SectionHeading"
+                local:MvxBind="Text AddressLabelText" />
+            <TextView
+                style="@style/Proteo.TextView.SectionContent"
+                local:MvxBind="Text Address" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

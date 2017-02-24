@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        style="@style/Proteo.Button.Bottom"
+        android:id="@+id/checksdonebutton"
+        local:MvxBind="Text ChecksDoneButtonLabel; Click ChecksDoneCommand" />
+    <Mvx.MvxListView
+        android:id="@+id/SafetyListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/checksdonebutton"
+        local:MvxBind="ItemsSource SafetyCheckItemViewModels"
+        local:MvxItemTemplate="@layout/item_safetycheckitem" />
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsProgressing; Message ProgressingMessage;" />
+</RelativeLayout>

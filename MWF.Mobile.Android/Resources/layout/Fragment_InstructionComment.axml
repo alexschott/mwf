@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        local:MvxBind="Text InstructionCommentPageHeader"
+        style="@style/Proteo.TextView.PageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp" />
+    <EditText
+        style="@style/Proteo.EditText"
+        android:id="@+id/commentText"
+        local:MvxBind="Text CommentText"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="32dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonAdvanceInstructionComment"
+        local:MvxBind="Text InstructionCommentButtonLabel; Click AdvanceInstructionCommentCommand"
+        style="@style/Proteo.Button"
+        android:layout_marginTop="32dp" />
+</LinearLayout>

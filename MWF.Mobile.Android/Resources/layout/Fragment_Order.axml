@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonChangeQuantity"
+        local:MvxBind="Text ChangeOrderQuantityButtonLabel; Click ReviseQuantityOrderCommand; Visibility ChangeOrderQuantity, Converter=Visibility;"
+        style="@style/Proteo.Button.Bottom" />
+    <ScrollView
+        android:id="@+id/OrderDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ButtonChangeQuantity">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp">
+            <TextView
+                style="@style/Proteo.TextView.MainHeading"
+                local:MvxBind="Text OrderName"
+                android:layout_marginBottom="16dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:background="#d1d1d1"
+                    android:text="Load No" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#d1d1d1"
+                    local:MvxBind="Text OrderLoadNo" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:text="Delivery No"
+                    android:background="#ffffff" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#ffffff"
+                    local:MvxBind="Text OrderDeliveryNo" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:background="#d1d1d1"
+                    android:text="Pallet Spaces" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#d1d1d1"
+                    local:MvxBind="Text OrderQuantity" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:background="#ffffff"
+                    android:text="Pallets" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#ffffff"
+                    local:MvxBind="Text OrderPallets" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:background="#d1d1d1"
+                    android:text="Weight" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#d1d1d1"
+                    local:MvxBind="Text OrderWeight" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:background="#ffffff"
+                    android:text="Cases" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#ffffff"
+                    local:MvxBind="Text OrderCases" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.4"
+                    android:background="#d1d1d1"
+                    android:text="Goods Type" />
+                <textview
+                    style="@style/Proteo.TextView.Order"
+                    android:layout_weight="0.6"
+                    android:background="#d1d1d1"
+                    local:MvxBind="Text OrderGoodsType" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

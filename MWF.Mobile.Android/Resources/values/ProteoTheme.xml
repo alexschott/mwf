@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+ <!-- ===================== Main Theme ========================= -->
+  
+  <!-- ProteoNoMargins gets applied at global level and therefore to dialogs (which exessive margins spoil)  -->
+  
+  <style name="ProteoNoMargins" parent="@android:style/Theme.Holo.Light">
+    <item name = "android:layout_width">match_parent</item>
+    <item name = "android:layout_height">wrap_content</item>
+    <item name = "android:gravity">center_horizontal</item>
+  </style>
+
+  <style name="Proteo" parent="style/ProteoNoMargins">
+    <item name = "android:layout_marginTop">10dp</item>
+    <item name = "android:layout_marginLeft">10dp</item>
+    <item name = "android:layout_marginRight">10dp</item>
+  </style> 
+  
+    <!-- ===================== TextViews ========================= -->
+  
+  <style name="ProteoDialog" parent="@android:style/Theme.Holo.Light">
+    <item name="android:gravity">left</item>
+  </style>
+
+  <!-- ===================== TextViews ========================= -->
+
+  
+  <style name="Proteo.TextView.MainHeading" parent="style/Proteo">
+    <item name = "android:textSize">30dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.SubHeading" parent="style/Proteo">
+    <item name = "android:layout_marginTop">5dp</item>
+    <item name = "android:textSize">20dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.VersionFooter" parent="style/Proteo">
+    <item name = "android:layout_marginTop">5dp</item>
+    <item name = "android:layout_alignParentBottom">true</item>
+    <item name = "android:textSize">10dp</item>
+    <item name ="android:textColor">#b8b8b8</item>
+  </style>
+
+  <style name = "Proteo.TextView.Instructions" parent="style/Proteo">
+    <item name = "android:textSize">10dp</item>
+    <item name = "android:layout_marginBottom">5dp</item>
+    <item name = "android:paddingLeft">8dp</item>
+    <item name = "android:background">#cccfd1</item>
+    <item name = "android:gravity">left</item>
+    <item name = "android:layout_marginTop">0dp</item>
+    <item name = "android:layout_marginLeft">0dp</item>
+    <item name = "android:layout_marginRight">0dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.PageTitle" parent="style/Proteo">
+    <item name = "android:textSize">25dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.Information" parent="style/Proteo">
+    <item name = "android:textSize">20dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.SubInformation" parent="style/Proteo">
+    <item name = "android:textSize">15dp</item>
+  </style>
+
+  <style name ="Proteo.TextView.SectionHeading" parent="Proteo.TextView.ItemText">
+    <item name = "android:layout_marginLeft">0dp</item>
+    <item name = "android:layout_marginRight">0dp</item>
+    <item name = "android:background">@drawable/border</item>
+    <item name = "android:paddingLeft">10dp</item>
+    <item name = "android:textSize">18dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.SectionContent" parent="style/Proteo">
+    <item name = "android:textSize">14dp</item>
+    <item name = "android:gravity">left</item>
+    <item name = "android:layout_marginLeft">10dp</item>
+    <item name = "android:layout_marginTop">0dp</item>
+    <item name = "android:layout_marginBottom">0dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.SectionContentLarge" parent="style/Proteo.TextView.SectionContent">
+    <item name = "android:textSize">15dp</item>
+    <item name = "android:layout_marginBottom">1dp</item>
+  </style>
+
+  <style name = "Proteo.TextView.MessageContent" parent="style/Proteo.TextView.SectionContentLarge">
+    <item name = "android:textSize">18dp</item>
+    <item name = "android:layout_marginTop">8dp</item>
+    <item name = "android:layout_marginBottom">5dp</item>
+  </style>
+
+  <style name ="Proteo.TextView.ItemText" parent="style/Proteo">
+    <item name = "android:gravity">left</item>
+    <item name = "android:layout_marginTop">4dp</item>
+    <item name = "android:layout_marginBottom">4dp</item>
+    <item name = "android:layout_weight">0.9</item>
+    <item name = "android:textSize">20dp</item>
+  </style>
+
+  <style name ="Proteo.TextView.ItemText.Small" parent="style/Proteo.TextView.ItemText">
+    <item name = "android:textSize">16dp</item>
+  </style>
+
+  <style name ="Proteo.TextView.ItemText.VerySmall" parent="style/Proteo.TextView.ItemText">
+    <item name = "android:textSize">14dp</item>
+  </style>
+
+  <style name ="Proteo.TextView.ItemSectionHeading" parent="Proteo.TextView.ItemText">
+    <item name = "android:layout_marginLeft">0dp</item>
+    <item name = "android:layout_marginRight">0dp</item>
+    <item name = "android:layout_marginBottom">0dp</item>
+    <item name = "android:layout_marginTop">0dp</item>
+    <item name = "android:background">@drawable/border</item>
+    <item name = "android:paddingLeft">16dp</item>
+  </style>
+
+  <style name="Proteo.TextView.ListHeadingNoSections" parent ="style/Proteo">
+    <item name = "android:background">#cccfd1</item>
+    <item name = "android:gravity">left</item>
+    <item name = "android:layout_marginBottom">0dp</item>
+    <item name = "android:layout_marginTop">0dp</item>
+    <item name = "android:layout_marginLeft">0dp</item>
+    <item name = "android:layout_marginRight">0dp</item>
+    <item name = "android:layout_width">fill_parent</item>
+    <item name = "android:paddingTop">4dp</item>
+    <item name = "android:paddingBottom">4dp</item>
+    <item name = "android:paddingLeft">8dp</item>
+    <item name = "android:textSize">12dp</item>
+  </style>
+
+  <style name="Proteo.TextView.ListHeadingSections" parent="style/Proteo.TextView.ListHeadingNoSections">
+    <item name = "android:background">#666e77</item>
+    <item name = "android:textColor">#cccfd1</item>
+  </style>
+
+  <style name="Proteo.TextView.Order" parent="style/Proteo.TextView.Instructions">
+    <item name="android:layout_width">0dp</item>
+    <item name ="android:layout_height">fill_parent</item>
+    <item name="android:textSize">20dp</item>
+    <item name="android:layout_marginBottom">0dp</item>
+    <item name="android:paddingTop">4dp</item>
+    <item name="android:paddingBottom">4dp</item>
+  </style>
+
+  <style name="Proteo.TextView.Revise" parent="style/Proteo.TextView.Instructions">
+    <item name="android:layout_width">0dp</item>
+    <item name ="android:layout_height">fill_parent</item>
+    <item name="android:textSize">20dp</item>
+    <item name="android:layout_marginBottom">0dp</item>
+    <item name="android:paddingTop">4dp</item>
+    <item name="android:paddingBottom">4dp</item>
+  </style>
+
+  <style name="Proteo.TextView.InfoAndInput" parent="Proteo.TextView.Order">
+    <item name = "android:background">@android:color/transparent</item>
+  </style>
+
+  <!-- ===================== Buttons ========================= -->
+
+  <style name="Proteo.Button" parent="style/Proteo">
+    <item name = "android:background">@drawable/button_selector</item>
+    <item name = "android:gravity">center</item>
+  </style>
+
+  <style name="Proteo.Button.Secondary" parent="style/Proteo.Button">
+    <item name = "android:layout_width">wrap_content</item>
+    <item name = "android:paddingLeft">15dp</item>
+    <item name = "android:paddingRight">15dp</item>
+    <item name = "android:textSize">14dp</item>
+  </style>
+
+  <style name="Proteo.Button.Bottom" parent="style/Proteo.Button">
+    <item name = "android:layout_alignParentBottom">true</item>
+    <item name = "android:layout_marginBottom">10dp</item>
+  </style>
+
+  <style name="Proteo.Button.InSection" parent="style/Proteo.Button">
+    <item name = "android:layout_width">wrap_content</item>
+    <item name = "android:layout_height">34dp</item>
+    <item name = "android:paddingLeft">10dp</item>
+    <item name = "android:paddingRight">10dp</item>
+    <item name = "android:textSize">14dp</item>  
+  </style>
+
+  <style name="Proteo.Button.NonBottom" parent="style/Proteo.Button">
+    <item name = "android:layout_marginBottom">10dp</item>
+  </style>
+
+
+  <!-- ===================== EditTexts ========================= -->
+
+  <style name="Proteo.EditText" parent="style/Proteo">
+    <item name = "android:paddingLeft">10dp</item>
+    <item name = "android:paddingRight">10dp</item>
+    <item name = "android:layout_height">48dp</item>
+    <item name = "android:textSize">16dp</item>
+    <item name = "android:background">#cccfd1</item>
+    <item name = "android:gravity">center</item>
+    <item name = "android:singleLine">true</item>
+  </style>
+
+  <style name="Proteo.EditText.NumberPasscode" parent="style/Proteo.EditText">
+    <item name = "android:textSize">30dp</item>
+    <item name = "android:inputType">numberPassword</item>
+    <item name = "android:password">true</item>
+  </style>
+
+  <style name="Proteo.EditText.Number" parent="style/Proteo.EditText">
+    <item name = "android:textSize">30dp</item>
+    <item name = "android:inputType">number</item>
+  </style>
+
+  <style name = "Proteo.Multiline" parent="style/Proteo">
+    <item name = "android:gravity">left</item>
+    <item name = "android:singleLine">false</item>
+    <item name = "android:textSize">14dp</item>
+  </style>
+
+  <style name="Proteo.Multiline.Large" parent="style/Proteo.Multiline">
+    <item name ="android:textSize">18dp</item>
+  </style>
+
+
+  <!-- ===================== ImageViews ========================= -->
+
+  <style name="Proteo.ImageView.MWFLogo" parent="@android:style/Theme.Holo.Light">
+    <item name = "android:layout_width">227.5dp</item>
+    <item name = "android:layout_height">117.0dp</item>
+    <item name = "android:src">@drawable/proteo_mobile_white</item>
+    <item name = "android:gravity">center_horizontal</item>
+  </style>
+
+  <style name="Proteo.ImageView.InstructionIcon" parent="@android:style/Theme.Holo.Light">
+    <item name = "android:layout_width">0dp</item>
+    <item name = "android:layout_height">40dp</item>
+    <item name = "android:layout_weight">.1</item> 
+  </style>
+
+  <!-- ===================== SignaturePads ========================= -->
+  
+  <style name="Proteo.SignaturePad" parent="style/Proteo">
+    <item name="android:layout_height">200dp</item>
+    <item name = "android:layout_marginLeft">8dp</item>
+    <item name = "android:layout_marginRight">8dp</item>
+  </style>
+
+  <!-- ===================== Switches ========================= -->
+  <style name = "Proteo.Switch.Text" parent="style/Proteo">
+    <item name = "android:textSize">20dp</item>
+  </style>
+
+  <!-- ===================== Spinners ========================= -->
+
+  <style name = "Proteo.Spinner" parent="style/Proteo">
+    <item name = "android:layout_marginTop">2dp</item>
+    <item name = "android:layout_marginLeft">10dp</item>
+    <item name = "android:layout_marginRight">10dp</item>
+  </style>
+
+  <style name = "Proteo.Spinner.Text" parent="style/Proteo">
+    <item name = "android:textSize">18dp</item>
+    <item name = "android:layout_marginTop">2dp</item>
+    <item name = "android:layout_marginLeft">2dp</item>
+  </style>
+
+  <style name = "Proteo.SpinnerDropdown.Text" parent="style/Proteo">
+    <item name = "android:textSize">15dp</item>
+    <item name = "android:layout_marginTop">10dp</item>
+    <item name = "android:layout_marginBottom">10dp</item>
+  </style>
+  
+</resources>

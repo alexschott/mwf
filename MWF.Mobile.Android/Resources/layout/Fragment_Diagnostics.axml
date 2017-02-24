@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        style="@style/Proteo.TextView.SubHeading"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        local:MvxBind="Text DiagnosticsMessageLabel" />
+    <Button
+        style="@style/Proteo.Button.Bottom"
+        android:layout_marginBottom="16dp"
+        local:MvxBind="Text EnterButtonLabel; Click SendDiagnosticsCommand" />
+    <TextView
+        style="@style/Proteo.TextView.VersionFooter"
+        local:MvxBind="Text VersionText" />
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsBusy; Message ProgressMessage; Title ProgressTitle;" />
+</RelativeLayout>

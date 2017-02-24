@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/SafetyCheckItem">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/empty_square"
+            local:MvxBind="Visibility CheckStatus, Converter=SafetyCheckEnum, ConverterParameter=NotSet" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_accept"
+            local:MvxBind="Visibility CheckStatus, Converter=SafetyCheckEnum, ConverterParameter=Passed" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_warning"
+            local:MvxBind="Visibility CheckStatus, Converter=SafetyCheckEnum, ConverterParameter=DiscretionaryPass" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_error"
+            local:MvxBind="Visibility CheckStatus, Converter=SafetyCheckEnum, ConverterParameter=Failed" />
+        <TextView
+            android:id="@+id/SafetyCheckTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:layout_weight="2"
+            android:textSize="20.0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            local:MvxBind="Text Title" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_action_overflow" />
+    </LinearLayout>
+</LinearLayout>

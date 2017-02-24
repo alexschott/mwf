@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:paddingTop="32dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            style="@style/Proteo.TextView.SubHeading"
+            local:MvxBind="Text Message"
+            android:layout_height="0dp"
+            android:layout_width="fill_parent"
+            android:layout_weight="2" />
+        <Button
+            style="@style/Proteo.Button.Bottom"
+            android:id="@+id/buttonScanAgain"
+            local:MvxBind="Text ScanAgainButtonLabel; LongClick SendDiagnosticsCommand" />
+    </LinearLayout>
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsBusy; Message ProgressMessage; Title ProgressTitle;" />
+</RelativeLayout>

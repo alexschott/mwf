@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <mwf.KeyboardlessEditText
+        android:id="@+id/BarcodeInput"
+        android:singleLine="true"
+        android:focusable="true"
+        android:layout_height="0dp"
+        local:MvxBind="Text BarcodeInput" />
+    <TextView
+      android:id="@+id/InstructionsLabel"
+      style="@style/Proteo.TextView.ListHeadingNoSections"
+      local:MvxBind="Text InstructionsText" />
+    <Button
+        style="@style/Proteo.Button.Bottom"
+        android:id="@+id/ButtonCompleteScanning"
+        local:MvxBind="Text CompleteButtonText; Click CompleteScanningCommand; Enabled CanScanningBeCompleted" />
+    <mwf.BindableGroupListView
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/ButtonCompleteScanning"
+        android:layout_below="@id/InstructionsLabel"
+        local:MvxBind="ItemsSource BarcodeSections"
+        local:MvxItemTemplate="@layout/item_barcode"
+        local:GroupItemTemplate="@layout/item_section" />
+    <mwf.BindableProgress
+        local:MvxBind="ShowProgress IsBusy; Message ScanMessage; Title ScanTitle;" />
+</RelativeLayout>

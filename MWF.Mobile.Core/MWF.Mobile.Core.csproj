@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E15DCDF2-836F-4203-B322-9E2FDCDEA3BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MWF.Mobile.Core</RootNamespace>
+    <AssemblyName>MWF.Mobile.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <NuGetPackageImportStamp>7eb8e3a1</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly>
+    </CodeContractsCustomRewriterAssembly>
+    <CodeContractsCustomRewriterClass>
+    </CodeContractsCustomRewriterClass>
+    <CodeContractsLibPaths>
+    </CodeContractsLibPaths>
+    <CodeContractsExtraRewriteOptions>
+    </CodeContractsExtraRewriteOptions>
+    <CodeContractsExtraAnalysisOptions>
+    </CodeContractsExtraAnalysisOptions>
+    <CodeContractsSQLServerOption>
+    </CodeContractsSQLServerOption>
+    <CodeContractsBaseLineFile>
+    </CodeContractsBaseLineFile>
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Firmin|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Firmin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Converters\BoolInverseValueConverter.cs" />
+    <Compile Include="Converters\NullableBoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\DateToTextTimeValueConverter.cs" />
+    <Compile Include="Converters\DateToTextMessageValueConverter.cs" />
+    <Compile Include="Converters\InstructionTypeEnumValueConverter.cs" />
+    <Compile Include="Converters\JsonDigitToBooleanConverter.cs" />
+    <Compile Include="Converters\JsonMultiFormatDateTimeConverter.cs" />
+    <Compile Include="Converters\JsonWrappedItemConverter.cs" />
+    <Compile Include="Converters\JsonWrappedListConverter.cs" />
+    <Compile Include="Converters\MessageStatusValueConverter.cs" />
+    <Compile Include="Converters\SafetyCheckEnumValueConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\BarcodeDeliveredConverter.cs" />
+    <Compile Include="Converters\SingleObjectToListConverter.cs" />
+    <Compile Include="Converters\StringHasLengthConverter.cs" />
+    <Compile Include="Database\AsyncTableQuery.cs" />
+    <Compile Include="Database\Connection.cs" />
+    <Compile Include="Database\IAsyncConnection.cs" />
+    <Compile Include="Database\IConnection.cs" />
+    <Compile Include="Database\IAsyncTableQuery.cs" />
+    <Compile Include="Enums\CheckInOutActions.cs" />
+    <Compile Include="Enums\ScanState.cs" />
+    <Compile Include="Enums\DriverActivity.cs" />
+    <Compile Include="Enums\InstructionProgress.cs" />
+    <Compile Include="Enums\InstructionType.cs" />
+    <Compile Include="Enums\LogType.cs" />
+    <Compile Include="Enums\ReportReason.cs" />
+    <Compile Include="Enums\SafetyCheckStatus.cs" />
+    <Compile Include="Enums\SyncState.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Extensions\ReflectionExtensions.cs" />
+    <Compile Include="Helpers\CheckInOutQRCodeValidator.cs" />
+    <Compile Include="Helpers\SMP.cs" />
+    <Compile Include="Messages\InvalidLicenseNotificationMessage.cs" />
+    <Compile Include="Messages\GatewayInstructionNotificationMessage.cs" />
+    <Compile Include="Messages\GatewayQueueTimerCommandMessage.cs" />
+    <Compile Include="Messages\GatewayPollTimerCommandMessage.cs" />
+    <Compile Include="Messages\GatewayQueueTimerElapsedMessage.cs" />
+    <Compile Include="Messages\GatewayPollTimerElapsedMessage.cs" />
+    <Compile Include="Messages\ModalNavigationResultMessage.cs" />
+    <Compile Include="Messages\TopLevelExceptionHandlerMessage.cs" />
+    <Compile Include="Models\Attributes\ChildRelationshipAttribute.cs" />
+    <Compile Include="Models\Attributes\ForeignKeyAttribute.cs" />
+    <Compile Include="Models\CheckInOutData.cs" />
+    <Compile Include="Models\CurrentDriver.cs" />
+    <Compile Include="Models\GatewayQueueItem.cs" />
+    <Compile Include="Models\GatewayServiceRequest\Action.cs" />
+    <Compile Include="Models\GatewayServiceRequest\ActionOfT.cs" />
+    <Compile Include="Models\GatewayServiceRequest\BaseContent.cs" />
+    <Compile Include="Models\GatewayServiceRequest\Content.cs" />
+    <Compile Include="Models\GatewayServiceRequest\DeviceInfo.cs" />
+    <Compile Include="Models\GatewayServiceRequest\LicenseCheckMessage.cs" />
+    <Compile Include="Models\GatewayServiceRequest\DeviceMessage.cs" />
+    <Compile Include="Models\GatewayServiceRequest\FileParameter.cs" />
+    <Compile Include="Models\GatewayServiceRequest\Parameter.cs" />
+    <Compile Include="Models\GatewayServiceResponse\ResponseAction.cs" />
+    <Compile Include="Models\GatewayServiceResponse\Response.cs" />
+    <Compile Include="Models\GatewayServiceResponse\SafetyProfiles.cs" />
+    <Compile Include="Models\GatewayServiceResponse\MobileDatum.cs" />
+    <Compile Include="Models\GatewayServiceResponse\Vehicles.cs" />
+    <Compile Include="Models\GatewayServiceResponse\VehicleViews.cs" />
+    <Compile Include="Models\GatewayServiceResponse\Drivers.cs" />
+    <Compile Include="Models\GatewayServiceResponse\ResponseActionOfT.cs" />
+    <Compile Include="Models\GatewayServiceResponse\ResponseOfT.cs" />
+    <Compile Include="Helpers\HttpResult.cs" />
+    <Compile Include="Helpers\HttpResultOfT.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\IBlueSphereEntity.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Instruction.cs" />
+    <Compile Include="Models\Instruction\Additional.cs" />
+    <Compile Include="Models\Instruction\Address.cs" />
+    <Compile Include="Models\Instruction\Barcode.cs" />
+    <Compile Include="Models\Instruction\ConfirmPallets.cs" />
+    <Compile Include="Models\Instruction\ConfirmCases.cs" />
+    <Compile Include="Models\Instruction\ScannedDelivery.cs" />
+    <Compile Include="Models\Instruction\ConfirmQuantity.cs" />
+    <Compile Include="Models\Instruction\DeliveryDescription.cs" />
+    <Compile Include="Models\Instruction\Instruction.cs" />
+    <Compile Include="Models\Instruction\ItemAdditional.cs" />
+    <Compile Include="Models\Instruction\MobileApplicationDataChunk.cs" />
+    <Compile Include="Models\Instruction\MobileApplicationDataChunkCollection.cs" />
+    <Compile Include="Models\Instruction\MobileApplicationDataChunkContentActivities.cs" />
+    <Compile Include="Models\Instruction\MobileApplicationDataChunkContentActivityData.cs" />
+    <Compile Include="Models\Instruction\MobileApplicationDataChunkContentActivity.cs" />
+    <Compile Include="Models\Instruction\MobileApplicationDataChunkContentOrder.cs" />
+    <Compile Include="Models\Instruction\MobileData.cs" />
+    <Compile Include="Models\Instruction\MobileDataCollection.cs" />
+    <Compile Include="Models\Instruction\Order.cs" />
+    <Compile Include="Models\Instruction\Item.cs" />
+    <Compile Include="Models\Instruction\Trailer.cs" />
+    <Compile Include="Models\LatestSafetyCheck.cs" />
+    <Compile Include="Models\LogMessage.cs" />
+    <Compile Include="Models\MWFMobileConfig.cs" />
+    <Compile Include="Models\QRData.cs" />
+    <Compile Include="Models\Signature.cs" />
+    <Compile Include="Models\SafetyCheckFault.cs" />
+    <Compile Include="Models\SafetyCheckFaultType.cs" />
+    <Compile Include="Models\SafetyCheckData.cs" />
+    <Compile Include="Models\SafetyProfile.cs" />
+    <Compile Include="Models\SyncAck.cs" />
+    <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\Trailer.cs" />
+    <Compile Include="Models\BaseVehicle.cs" />
+    <Compile Include="Models\VehicleView.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\VerbProfile.cs" />
+    <Compile Include="Models\ApplicationProfile.cs" />
+    <Compile Include="Models\VerbProfileItem.cs" />
+    <Compile Include="Portable\ICheckForSoftwareUpdates.cs" />
+    <Compile Include="Portable\ICustomUserInteraction.cs" />
+    <Compile Include="Portable\ILaunchPhone.cs" />
+    <Compile Include="Portable\IReachability.cs" />
+    <Compile Include="Portable\ISound.cs" />
+    <Compile Include="Portable\IToast.cs" />
+    <Compile Include="Portable\IUpload.cs" />
+    <Compile Include="Portable\IVibrate.cs" />
+    <Compile Include="Portable\IDisposable.cs" />
+    <Compile Include="Portable\IVisible.cs" />
+    <Compile Include="Presentation\CloseUpToViewPresentationHint.cs" />
+    <Compile Include="Presentation\CloseToInitialViewPresentationHint.cs" />
+    <Compile Include="Presentation\ICustomPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ApplicationProfileRepository.cs" />
+    <Compile Include="Repositories\ConfigRepository.cs" />
+    <Compile Include="Repositories\CurrentDriverRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IConfigRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICurrentDriverRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IMobileDataRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IRepositories.cs" />
+    <Compile Include="Repositories\Interfaces\ILatestSafetyCheckRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ILogMessageRepository.cs" />
+    <Compile Include="Repositories\LogMessageRepository.cs" />
+    <Compile Include="Repositories\MobileDataRepository.cs" />
+    <Compile Include="Repositories\Repositories.cs" />
+    <Compile Include="Repositories\GatewayQueueItemRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IGatewayQueueItemRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITrailerRepository.cs" />
+    <Compile Include="Repositories\LatestSafetyCheckRepository.cs" />
+    <Compile Include="Repositories\TrailerRepository.cs" />
+    <Compile Include="Repositories\VehicleRepository.cs" />
+    <Compile Include="Repositories\SafetyProfileRepository.cs" />
+    <Compile Include="Repositories\DriverRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IApplicationProfileRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICustomerRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IDriverRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IVerbProfileRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISafetyProfileRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IDeviceRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IVehicleRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IRepository.cs" />
+    <Compile Include="Repositories\DeviceRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\VerbProfileRepository.cs" />
+    <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\CheckInOutService.cs" />
+    <Compile Include="Services\DataChunkService.cs" />
+    <Compile Include="Services\IDataChunkService.cs" />
+    <Compile Include="Services\IDiagnosticsService.cs" />
+    <Compile Include="Services\IImageUploadService.cs" />
+    <Compile Include="Services\DiagnosticsService.cs" />
+    <Compile Include="Services\ImageUploadService.cs" />
+    <Compile Include="Services\ISafetyCheckService.cs" />
+    <Compile Include="Services\LoggingService.cs" />
+    <Compile Include="Services\ILoggingService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\GatewayQueuedService.cs" />
+    <Compile Include="Services\GatewayPollingService.cs" />
+    <Compile Include="Services\GatewayService.cs" />
+    <Compile Include="Services\GpsService.cs" />
+    <Compile Include="Services\HttpService.cs" />
+    <Compile Include="Services\IAuthenticationService.cs" />
+    <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Services\IGatewayQueuedService.cs" />
+    <Compile Include="Portable\IDeviceInfo.cs" />
+    <Compile Include="Services\IGatewayPollingService.cs" />
+    <Compile Include="Services\IGatewayService.cs" />
+    <Compile Include="Services\IGpsService.cs" />
+    <Compile Include="Services\IHttpService.cs" />
+    <Compile Include="Services\IInfoService.cs" />
+    <Compile Include="Services\InfoService.cs" />
+    <Compile Include="Services\SafetyCheckService.cs" />
+    <Compile Include="Database\AsyncConnection.cs" />
+    <Compile Include="Utilities\AsyncLock.cs" />
+    <Compile Include="Utilities\Timer.cs" />
+    <Compile Include="ViewModels\BarcodeItemViewModel.cs" />
+    <Compile Include="ViewModels\BarcodeSectionViewModel.cs" />
+    <Compile Include="ViewModels\BarcodeScanningViewModel.cs" />
+    <Compile Include="ViewModels\CheckInCompleteViewModel.cs" />
+    <Compile Include="ViewModels\CheckInViewModel.cs" />
+    <Compile Include="ViewModels\CheckOutViewModel.cs" />
+    <Compile Include="ViewModels\ConfirmTimesViewModel.cs" />
+    <Compile Include="ViewModels\DiagnosticsViewModel.cs" />
+    <Compile Include="ViewModels\CheckOutSignatureViewModel.cs" />
+    <Compile Include="ViewModels\Extensions\ViewModelExtensions.cs" />
+    <Compile Include="ViewModels\Interfaces\IInstructionNotificationViewModel.cs" />
+    <Compile Include="ViewModels\InstructionAddDeliveriesViewModel.cs" />
+    <Compile Include="ViewModels\BaseInstructionNotificationViewModel.cs" />
+    <Compile Include="ViewModels\BaseModalViewModel.cs" />
+    <Compile Include="Portable\ICloseApplication.cs" />
+    <Compile Include="ViewModels\DamageStatus.cs" />
+    <Compile Include="ViewModels\BaseCameraViewModel.cs" />
+    <Compile Include="ViewModels\DisplaySafetyCheckFaultItemViewModel.cs" />
+    <Compile Include="ViewModels\DisplaySafetyCheckViewModel.cs" />
+    <Compile Include="ViewModels\InboxViewModel.cs" />
+    <Compile Include="ViewModels\InstructionClausedViewModel.cs" />
+    <Compile Include="ViewModels\InstructionOnSiteViewModel.cs" />
+    <Compile Include="ViewModels\InstructionTrunkProceedViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IModalViewModel.cs" />
+    <Compile Include="ViewModels\MessageViewModel.cs" />
+    <Compile Include="ViewModels\ModalCameraViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\NavDataExtensions.cs" />
+    <Compile Include="ViewModels\Navigation\MessageModalNavItem.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
+    <Compile Include="ViewModels\InstructionSignatureViewModel.cs" />
+    <Compile Include="ViewModels\InstructionCommentViewModel.cs" />
+    <Compile Include="ViewModels\InstructionTrailerViewModel.cs" />
+    <Compile Include="ViewModels\InstructionViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\NavData.cs" />
+    <Compile Include="ViewModels\ManifestInstructionViewModel.cs" />
+    <Compile Include="ViewModels\ManifestSectionViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\SafetyCheckNavItem.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\BaseFragmentViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IBackButtonHandler.cs" />
+    <Compile Include="ViewModels\CheckOutQRCodeViewModel.cs" />
+    <Compile Include="ViewModels\ReviseQuantityViewModel.cs" />
+    <Compile Include="ViewModels\CameraImageViewModel.cs" />
+    <Compile Include="ViewModels\SafetyCheckFaultImageViewModel.cs" />
+    <Compile Include="ViewModels\BarcodeStatusViewModel.cs" />
+    <Compile Include="ViewModels\SafetyCheckItemViewModel.cs" />
+    <Compile Include="ViewModels\SafetyCheckFaultViewModel.cs" />
+    <Compile Include="ViewModels\InstructionSafetyCheckSignatureViewModel.cs" />
+    <Compile Include="ViewModels\SafetyCheckSignatureViewModel.cs" />
+    <Compile Include="ViewModels\InstructionSafetyCheckViewModel.cs" />
+    <Compile Include="ViewModels\SafetyCheckViewModel.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\OdometerViewModel.cs" />
+    <Compile Include="ViewModels\BaseTrailerListViewModel.cs" />
+    <Compile Include="ViewModels\SidebarCameraViewModel.cs" />
+    <Compile Include="ViewModels\CheckOutTermsViewModel.cs" />
+    <Compile Include="ViewModels\VehicleListViewModel.cs" />
+    <Compile Include="ViewModels\CustomerCodeViewModel.cs" />
+    <Compile Include="ViewModels\ManifestViewModel.cs" />
+    <Compile Include="ViewModels\PasscodeViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\BaseActivityViewModel.cs" />
+    <Compile Include="ViewModels\StartupViewModel.cs" />
+    <Compile Include="ViewModels\TrailerListViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Location">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Location.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Plugins.Location.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PictureChooser">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.PictureChooser.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Plugins.PictureChooser.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.5.1\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net.Async, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:background="#80ffffff">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:background="#ffd3d3d3">
+            <ImageView
+                android:src="@drawable/Icon"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:padding="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="Scan QR Code"
+                android:background="#ffd3d3d3"
+                android:layout_gravity="left"
+                android:gravity="left|center" />
+        </LinearLayout>
+        <TextView
+            style="@style/Proteo.TextView.SubHeading"
+            android:text="Place a QR code in the camera viewfinder to scan it."
+            android:layout_width="fill_parent" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="#ffff0000" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:background="#80ffffff">
+        <TextView
+            style="@style/Proteo.TextView.SubHeading"
+            android:text="Try to avoid shadows and glare. Hold the device back about 6 inches from the QR code."
+            android:layout_width="fill_parent" />
+    </LinearLayout>
+</LinearLayout>
